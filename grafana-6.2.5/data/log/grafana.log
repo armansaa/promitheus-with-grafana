@@ -1,0 +1,1 @@
+t=2020-04-11T08:04:29+0000 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/1/api/v1/query_range status=503 remote_addr=10.1.1.2 time_ms=1 size=19 referer="http://10.1.1.74:3000/d/XdkT3fjZk/new-dashboard-copy?tab=queries&orgId=1&fullscreen&edit&panelId=2&from=now%2Fd&to=now%2Fd&refresh=5s"

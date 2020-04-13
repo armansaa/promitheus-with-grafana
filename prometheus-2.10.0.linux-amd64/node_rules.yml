@@ -1,0 +1,18 @@
+
+groups:
+- name: node.rules
+  rules:
+  - alert: InstanceDown
+    expr: up{job="node-kenzo"} == 0
+    for: 1m
+    annotations:
+      summary: "Instance {{ $labels.instance }} down"
+      description: "Instance {{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes."
+
+  - alert: ApacheDown
+    expr: apache_up{job="apache-exporter-kenzo"} == 0
+    for: 5s
+    annotations:
+      summary: "Apache {{ $labels.instance }} down"
+      description: "Apache {{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes."
+

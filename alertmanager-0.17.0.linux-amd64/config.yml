@@ -1,0 +1,18 @@
+
+global:
+  resolve_timeout: 1m
+
+route:
+  group_by: [Alertname]
+  receiver: email-me
+
+receivers:
+- name: email-me
+  email_configs:
+  - to: "screwdriver2905@gmail.com"
+    from: "screwdriver2905@gmail.com"
+    smarthost: smtp.gmail.com:587
+    auth_username: "screwdriver2905@gmail.com"
+    auth_identity: "screwdriver2905@gmail.com"
+    auth_password: "ehkvqqisakjveioq"
+    send_resolved: true
